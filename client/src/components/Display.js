@@ -1,11 +1,13 @@
 import React from 'react';
 
-function Display() {
+function Display(props) {
+  const { balls, strikes } = props.count;
+  const count = `${balls} balls and ${strikes} strikes`;
+
   return (
     <div className="Display">
-      <p>
-        Display will go here.
-      </p>
+      <h3>Count</h3>
+      <p>{count}</p>
     </div>
   );
 }
