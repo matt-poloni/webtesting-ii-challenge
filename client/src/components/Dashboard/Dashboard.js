@@ -7,7 +7,7 @@ function Dashboard(props) {
       <h3>Controls</h3>
       <div className="Buttons">
         <ControlBtn
-          txt="(+) Ball"
+          txt="Ball"
           onClick={props.clickBall}
         />
         <ControlBtn
