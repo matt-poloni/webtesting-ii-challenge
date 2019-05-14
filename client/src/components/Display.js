@@ -5,7 +5,7 @@ function Display(props) {
     return (<div>Error: Cannot display the count</div>)
   }
   const { balls, strikes } = props.count;
-  const text = `${balls} balls and ${strikes} strikes`;
+  const text = `${balls} ball${balls !== 1 ? 's' : ''} and ${strikes} strike${strikes !== 1 ? 's' : ''}`;
   return (
     <div className="Display">
       <h3>Count</h3>

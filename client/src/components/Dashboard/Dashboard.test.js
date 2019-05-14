@@ -8,23 +8,31 @@ describe('<Dashboard />', () => {
     render(<Dashboard />);
   });
 
-  it("should render a 'ball' button", () => {
-    const { getByText } = render(<Dashboard />);
-    getByText(/ball/i);
+  describe('Ball button', () => {
+    it('should render', () => {
+      const { getByText } = render(<Dashboard />);
+      getByText(/ball/i);
+    })
   })
 
-  it("should render a 'strike' button", () => {
-    const { getByText } = render(<Dashboard />);
-    getByText(/strike/i);
+  describe('Strike button', () => {
+    it('should render', () => {
+      const { getByText } = render(<Dashboard />);
+      getByText(/strike/i);
+    })
   })
 
-  it("should render a 'foul' button", () => {
-    const { getByText } = render(<Dashboard />);
-    getByText(/foul/i);
+  describe('Foul button', () => {
+    it('should render', () => {
+      const { getByText } = render(<Dashboard />);
+      getByText(/foul/i);
+    })
   })
 
-  it("should render a 'hit' button", () => {
-    const { getByText } = render(<Dashboard />);
-    getByText(/hit/i);
+  describe('Hit button', () => {
+    it('should render', () => {
+      const { getByText } = render(<Dashboard />);
+      getByText(/hit/i);
+    })
   })
 })
