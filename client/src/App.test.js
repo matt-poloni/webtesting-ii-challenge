@@ -25,6 +25,17 @@ describe('<App />', () => {
         fireEvent.click(button);
         getByText(/3 balls/i);
       })
+
+      it("should reset the 'ball' count when already at 3", () => {
+        const { getByText } = render(<App />);
+        const button = getByText(/Ball/);
+        fireEvent.click(button);
+        fireEvent.click(button);
+        fireEvent.click(button);
+        getByText(/3 balls/i);
+        fireEvent.click(button);
+        getByText(/0 balls/i);
+      })
     })
   })
 });
