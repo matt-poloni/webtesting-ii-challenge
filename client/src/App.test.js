@@ -59,4 +59,25 @@ describe('<App />', () => {
       })
     })
   })
+
+  describe('Foul button', () => {
+    it("should increase the 'strike' count when starting below 2", () => {
+      const { getByText } = render(<App />);
+      const button = getByText(/Foul/);
+      fireEvent.click(button);
+      getByText(/1 strike/i);
+      fireEvent.click(button);
+      getByText(/2 strikes/i);
+    })
+
+    it("should not alter the 'strike' count when already at 2", () => {
+      const { getByText } = render(<App />);
+      const button = getByText(/Foul/);
+      fireEvent.click(button);
+      fireEvent.click(button);
+      getByText(/2 strikes/i);
+      fireEvent.click(button);
+      getByText(/2 strikes/i);
+    })
+  })
 });
