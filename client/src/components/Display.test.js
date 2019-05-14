@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from 'react-testing-library';
-import App from './App';
+import Display from './Display';
 
-describe('<App />', () => {
+describe('<Display />', () => {
   it('should render', () => {
-    render(<App />);
+    render(<Display />);
   })
 })
