@@ -37,5 +37,26 @@ describe('<App />', () => {
         getByText(/0 balls/i);
       })
     })
+
+    describe('Strike button', () => {
+      it("should increase the 'strike' count when starting below 2", () => {
+        const { getByText } = render(<App />);
+        const button = getByText(/Strike/);
+        fireEvent.click(button);
+        getByText(/1 strike/i);
+        fireEvent.click(button);
+        getByText(/2 strikes/i);
+      })
+
+      it("should reset the 'strike' count when already at 2", () => {
+        const { getByText } = render(<App />);
+        const button = getByText(/Strike/);
+        fireEvent.click(button);
+        fireEvent.click(button);
+        getByText(/2 strikes/i);
+        fireEvent.click(button);
+        getByText(/0 strikes/i);
+      })
+    })
   })
 });
