@@ -58,13 +58,13 @@ The specifications are listed below.
 ### Display
 
 - [x] display the count of `balls` and `strikes` for the at-bat.
-- [ ] should be updated when the user records activity on the `Dashboard` component.
+- [x] should be updated when the user records activity on the `Dashboard` component.
 
 ### Dashboard
 
 - [x] provide a button that the person in charge can press every time there is a `strike`, `ball`, `foul` or `hit`.
 - [ ] there is **NO** need to specify the type of hit (single, double, etc).
-- [ ] changes recorded on this component should update the information shown by the `Display` component.
+- [x] changes recorded on this component should update the information shown by the `Display` component.
 
 Feel free add other components and organize and name your components any way you want to satisfy the requirements. **Make it up and make it happen developer!**.
 

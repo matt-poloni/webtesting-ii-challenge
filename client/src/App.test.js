@@ -80,4 +80,18 @@ describe('<App />', () => {
       getByText(/2 strikes/i);
     })
   })
+
+  describe('Hit button', () => {
+    it('should reset the count after being clicked', () => {
+      const { getByText } = render(<App />);
+      const ballBtn = getByText(/Ball/);
+      const strikeBtn = getByText(/Strike/);
+      const hitBtn = getByText(/Hit/);
+      fireEvent.click(ballBtn);
+      fireEvent.click(strikeBtn);
+      getByText(/1 ball and 1 strike/i);
+      fireEvent.click(hitBtn);
+      getByText(/0 balls and 0 strikes/i);
+    });
+  })
 });
