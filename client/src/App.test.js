@@ -94,4 +94,25 @@ describe('<App />', () => {
       getByText(/0 balls and 0 strikes/i);
     });
   })
+
+  describe('Out button', () => {
+    it("should increase the number of outs when starting below 2", () => {
+      const { getByText } = render(<App />);
+      const button = getByText(/Out/);
+      fireEvent.click(button);
+      getByText(/is 1 out/i);
+      fireEvent.click(button);
+      getByText(/are 2 outs/i);
+    })
+
+    it("should reset the number of outs when already at 2", () => {
+      const { getByText } = render(<App />);
+      const button = getByText(/Out/);
+      fireEvent.click(button);
+      fireEvent.click(button);
+      getByText(/are 2 outs/i);
+      fireEvent.click(button);
+      getByText(/are 0 outs/i);
+    })
+  })
 });

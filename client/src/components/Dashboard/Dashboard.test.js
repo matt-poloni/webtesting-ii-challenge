@@ -11,28 +11,35 @@ describe('<Dashboard />', () => {
   describe('Ball button', () => {
     it('should render', () => {
       const { getByText } = render(<Dashboard />);
-      getByText(/ball/i);
+      getByText(/Ball/);
     })
   })
 
   describe('Strike button', () => {
     it('should render', () => {
       const { getByText } = render(<Dashboard />);
-      getByText(/strike/i);
+      getByText(/Strike/);
     })
   })
 
   describe('Foul button', () => {
     it('should render', () => {
       const { getByText } = render(<Dashboard />);
-      getByText(/foul/i);
+      getByText(/Foul/);
     })
   })
 
   describe('Hit button', () => {
     it('should render', () => {
       const { getByText } = render(<Dashboard />);
-      getByText(/hit/i);
+      getByText(/Hit/);
+    })
+  })
+
+  describe('Out button', () => {
+    it('should render', () => {
+      const { getByText } = render(<Dashboard />);
+      getByText(/Out/);
     })
   })
 })

@@ -28,6 +28,7 @@ class App extends React.Component {
     } else {
       this.setState({
         inning: {
+          ...inning,
           balls: 0,
           strikes: 0,
         }
@@ -48,6 +49,7 @@ class App extends React.Component {
     } else {
       this.setState({
         inning: {
+          ...inning,
           balls: 0,
           strikes: 0,
         }
@@ -70,12 +72,35 @@ class App extends React.Component {
 
   clickHit = e => {
     e.preventDefault();
+    const { inning } = this.state;
     this.setState({
       inning: {
+        ...inning,
         balls: 0,
         strikes: 0,
       }
     })
+  }
+
+  clickOut = e => {
+    e.preventDefault();
+    const { inning } = this.state;
+    if(inning.outs < 2) {
+      this.setState({
+        inning: {
+          ...inning,
+          outs: inning.outs + 1,
+        }
+      })
+    } else {
+      this.setState({
+        inning: {
+          balls: 0,
+          strikes: 0,
+          outs: 0,
+        }
+      })
+    }
   }
 
   render() {
@@ -88,6 +113,7 @@ class App extends React.Component {
           clickStrike={this.clickStrike}
           clickFoul={this.clickFoul}
           clickHit={this.clickHit}
+          clickOut={this.clickOut}
         />
       </div>
     );

@@ -22,6 +22,10 @@ function Dashboard(props) {
           txt="Hit"
           onClick={props.clickHit}
         />
+        <ControlBtn
+          txt="Out"
+          onClick={props.clickOut}
+        />
       </div>
     </div>
   );
