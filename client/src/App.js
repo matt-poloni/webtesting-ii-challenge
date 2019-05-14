@@ -16,18 +16,64 @@ class App extends React.Component {
 
   clickBall = e => {
     e.preventDefault();
+    // const { count } = this.state
+    // if(count.balls < 3) {
+    //   this.setState({
+    //     count: {
+    //       ...count,
+    //       balls: count.balls + 1,
+    //     }
+    //   })
+    // } else {
+    //   this.setState({
+    //     count: {
+    //       balls: 0,
+    //       strikes: 0,
+    //     }
+    //   })
+    // }
   }
 
   clickStrike = e => {
     e.preventDefault();
+    // const { count } = this.state
+    // if(count.strikes < 2) {
+    //   this.setState({
+    //     count: {
+    //       ...count,
+    //       strikes: count.strikes + 1,
+    //     }
+    //   })
+    // } else {
+    //   this.setState({
+    //     count: {
+    //       balls: 0,
+    //       strikes: 0,
+    //     }
+    //   })
+    // }
   }
 
   clickFoul = e => {
     e.preventDefault();
+    // if(count.balls < 2) {
+    //   this.setState({
+    //     count: {
+    //       ...count,
+    //       strikes: count.strikes + 1,
+    //     }
+    //   })
+    // }
   }
 
   clickHit = e => {
     e.preventDefault();
+    // this.setState({
+    //   count: {
+    //     balls: 0,
+    //     strikes: 0,
+    //   }
+    // })
   }
 
   render() {
