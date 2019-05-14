@@ -18,43 +18,37 @@ class App extends React.Component {
   clickBall = e => {
     e.preventDefault();
     const { inning } = this.state;
-    if(inning.balls < 3) {
-      this.setState({
-        inning: {
-          ...inning,
-          balls: inning.balls + 1,
-        }
-      })
-    } else {
-      this.setState({
-        inning: {
-          ...inning,
-          balls: 0,
-          strikes: 0,
-        }
-      })
-    }
+    this.setState({
+      inning: {
+        ...inning,
+        balls: inning.balls < 3
+          ? inning.balls + 1
+          : 0,
+        strikes: inning.balls < 3
+          ? inning.strikes
+          : 0,
+      }
+    })
   }
 
   clickStrike = e => {
     e.preventDefault();
     const { inning } = this.state;
-    if(inning.strikes < 2) {
-      this.setState({
-        inning: {
-          ...inning,
-          strikes: inning.strikes + 1,
-        }
-      })
-    } else {
-      this.setState({
-        inning: {
-          ...inning,
-          balls: 0,
-          strikes: 0,
-        }
-      })
-    }
+    this.setState({
+      inning: {
+        balls: inning.strikes < 2
+          ? inning.balls
+          : 0,
+        strikes: inning.strikes < 2
+          ? inning.strikes + 1
+          : 0,
+        outs: inning.strikes < 2
+          ? inning.outs
+          : inning.outs < 2
+            ? inning.outs + 1
+            : 0,
+      }
+    })
   }
 
   clickFoul = e => {
@@ -78,6 +72,7 @@ class App extends React.Component {
         ...inning,
         balls: 0,
         strikes: 0,
+        outs: inning.outs,
       }
     })
   }
@@ -85,22 +80,15 @@ class App extends React.Component {
   clickOut = e => {
     e.preventDefault();
     const { inning } = this.state;
-    if(inning.outs < 2) {
-      this.setState({
-        inning: {
-          ...inning,
-          outs: inning.outs + 1,
-        }
-      })
-    } else {
-      this.setState({
-        inning: {
-          balls: 0,
-          strikes: 0,
-          outs: 0,
-        }
-      })
-    }
+    this.setState({
+      inning: {
+        balls: 0,
+        strikes: 0,
+        outs: inning.outs < 2
+          ? inning.outs + 1
+          : 0,
+      }
+    })
   }
 
   render() {
