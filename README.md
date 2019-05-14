@@ -37,7 +37,7 @@ Follow these steps to setup your git _fork_ and _branch_.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge the `<firstName-lastName>` branch into the master branch on your fork. **Please don't merge your own pull request**
+- [x] Submit a Pull-Request to merge the `<firstName-lastName>` branch into the master branch on your fork. **Please don't merge your own pull request**
 - [ ] Use GitHub's website to add your project manager as a reviewer on the pull-request.
 - [ ] Your project manager will count the project as complete by merging the branch back into the master branch of your forked repository.
 
@@ -51,20 +51,20 @@ The specifications are listed below.
 
 ### Count Rules
 
-- balls and strikes reset to 0 when a player reaches 3 strikes or 4 balls.
-- balls and strikes reset to 0 when a `hit` is recorded.
-- a `foul` increases strikes up to 2. With no strikes, a foul makes it 1 strike. With 1 strike, a foul makes it 2 strikes. With two strikes a foul has no effect, count stays at 2 strikes.
+- [ ] balls and strikes reset to 0 when a player reaches 3 strikes or 4 balls.
+- [ ] balls and strikes reset to 0 when a `hit` is recorded.
+- [ ] a `foul` increases strikes up to 2. With no strikes, a foul makes it 1 strike. With 1 strike, a foul makes it 2 strikes. With two strikes a foul has no effect, count stays at 2 strikes.
 
 ### Display
 
-- display the count of `balls` and `strikes` for the at-bat.
-- should be updated when the user records activity on the `Dashboard` component.
+- [ ] display the count of `balls` and `strikes` for the at-bat.
+- [ ] should be updated when the user records activity on the `Dashboard` component.
 
 ### Dashboard
 
-- provide a button that the person in charge can press every time there is a `strike`, `ball`, `foul` or `hit`.
-- there is **NO** need to specify the type of hit (single, double, etc).
-- changes recorded on this component should update the information shown by the `Display` component.
+- [ ] provide a button that the person in charge can press every time there is a `strike`, `ball`, `foul` or `hit`.
+- [ ] there is **NO** need to specify the type of hit (single, double, etc).
+- [ ] changes recorded on this component should update the information shown by the `Display` component.
 
 Feel free add other components and organize and name your components any way you want to satisfy the requirements. **Make it up and make it happen developer!**.
 
@@ -72,8 +72,8 @@ Feel free add other components and organize and name your components any way you
 
 This section is **optional** and not counted towards MVP. Start working on it after you're done with the main assignment.
 
-- Expand the solution to keep track of all the activity of a single inning. Include the number of outs and track them.
-- Expand the solution to keep track of the number of runs and errors in the inning.
-- Expand the solution to keep track of which bases are occupied and to record hits, doubles, triples and home runs.
-- Expand the solution to keep track of all activity across all innings. Display the current inning.
-- Work on [this repository for extra practice testing a legacy React application](https://github.com/LambdaSchool/React-Testing).
+- [ ] Expand the solution to keep track of all the activity of a single inning. Include the number of outs and track them.
+- [ ] Expand the solution to keep track of the number of runs and errors in the inning.
+- [ ] Expand the solution to keep track of which bases are occupied and to record hits, doubles, triples and home runs.
+- [ ] Expand the solution to keep track of all activity across all innings. Display the current inning.
+- [ ] Work on [this repository for extra practice testing a legacy React application](https://github.com/LambdaSchool/React-Testing).
