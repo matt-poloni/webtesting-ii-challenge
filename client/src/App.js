@@ -7,26 +7,27 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: {
+      inning: {
         balls: 0,
         strikes: 0,
-      }
+        outs: 0,
+      },
     }
   }
 
   clickBall = e => {
     e.preventDefault();
-    const { count } = this.state;
-    if(count.balls < 3) {
+    const { inning } = this.state;
+    if(inning.balls < 3) {
       this.setState({
-        count: {
-          ...count,
-          balls: count.balls + 1,
+        inning: {
+          ...inning,
+          balls: inning.balls + 1,
         }
       })
     } else {
       this.setState({
-        count: {
+        inning: {
           balls: 0,
           strikes: 0,
         }
@@ -36,17 +37,17 @@ class App extends React.Component {
 
   clickStrike = e => {
     e.preventDefault();
-    const { count } = this.state;
-    if(count.strikes < 2) {
+    const { inning } = this.state;
+    if(inning.strikes < 2) {
       this.setState({
-        count: {
-          ...count,
-          strikes: count.strikes + 1,
+        inning: {
+          ...inning,
+          strikes: inning.strikes + 1,
         }
       })
     } else {
       this.setState({
-        count: {
+        inning: {
           balls: 0,
           strikes: 0,
         }
@@ -56,12 +57,12 @@ class App extends React.Component {
 
   clickFoul = e => {
     e.preventDefault();
-    const { count } = this.state;
-    if(count.strikes < 2) {
+    const { inning } = this.state;
+    if(inning.strikes < 2) {
       this.setState({
-        count: {
-          ...count,
-          strikes: count.strikes + 1,
+        inning: {
+          ...inning,
+          strikes: inning.strikes + 1,
         }
       })
     }
@@ -69,9 +70,8 @@ class App extends React.Component {
 
   clickHit = e => {
     e.preventDefault();
-    const { count } = this.state;
     this.setState({
-      count: {
+      inning: {
         balls: 0,
         strikes: 0,
       }
@@ -82,7 +82,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h2>Current At Bat</h2>
-        <Display count={this.state.count} />
+        <Display inning={this.state.inning} />
         <Dashboard
           clickBall={this.clickBall}
           clickStrike={this.clickStrike}
